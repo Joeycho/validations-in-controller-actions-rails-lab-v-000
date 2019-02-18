@@ -37,7 +37,6 @@ RSpec.describe PostsController do
 
     it "redirects to show page" do
       patch :update, new_attributes
-      binding.pry
       expect(response).to redirect_to(post_path(@article))
     end
   end
