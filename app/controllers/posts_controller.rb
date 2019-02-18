@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     if @post.valid?
       @post.update(post_params)
       binding.pry
-      redirect_to post_path(n_post)
+      redirect_to post_path(@post)
     else
       render :show
     end
