@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   def update
       @post=Post.new(post_params)
     if @post.valid?
-      n_post = @post.update(post_params)
+      @post.update(post_params)
       redirect_to post_path(n_post)
     else
       render :show
